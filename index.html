@@ -21,13 +21,13 @@
                         class="bg-gray-100 p-4 space-x-4 rounded-lg input-shadow text-black w-72 outline-none focus:border-blue-500 border"
                         type="text"
                         placeholder="Enter a string..."
-                        id="string"
+                        id="stringToFormat"
                     />
                     <div
                         class="relative flex py-3 px-4 rounded-lg text-gray-500 font-semibold cursor-pointer"
                     >
                         <select
-                            id="case"
+                            id="caseSelect"
                             class="appearance-none bg-transparent py-3 px-4 border-none text-gray-500"
                         >
                             <option value="snakeCase" selected>
@@ -35,7 +35,7 @@
                             </option>
                             <option value="kebabCase">kebab-case</option>
                             <option value="camelCase">camelCase</option>
-                            <option value="PascalCase">PascalCase</option>
+                            <option value="pascalCase">PascalCase</option>
                         </select>
                         <div
                             class="absolute inset-y-0 right-2 flex items-center px-2 pointer-events-none"
@@ -54,7 +54,6 @@
                         <button
                             class="focus:border-blue-500 border bg-blue-600 active:bg-blue-800 py-4 px-7 text-white font-semibold rounded-lg hover:bg-blue-900 cursor-pointer"
                             id="searchButton"
-                            onclick="formatString()"
                         >
                             Format
                         </button>
