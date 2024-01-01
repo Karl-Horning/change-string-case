@@ -1,39 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <title>Change String Case</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
         />
         <link rel="stylesheet" href="./src/css/styles.css" />
+        <title>Your Page Title</title>
     </head>
+
     <body>
-        <div class="ui container">
-            <form class="form" onsubmit="return false">
-                <div class="ui massive middle aligned fluid action input">
+        <div class="min-h-screen flex justify-center items-center px-20">
+            <div class="space-y-10">
+                <div
+                    class="flex items-center px-2 py-0 space-x-6 bg-gray-300 rounded-xl shadow-lg"
+                >
                     <input
-                        id="string"
+                        class="bg-gray-100 p-4 space-x-4 rounded-lg input-shadow text-black w-72 outline-none focus:border-blue-500 border"
                         type="text"
                         placeholder="Enter a string..."
-                        autofocus
+                        id="string"
                     />
-                    <button
-                        id="submit"
-                        type="submit"
-                        class="ui button"
-                        onclick="formatString()"
+                    <div
+                        class="relative flex py-3 px-4 rounded-lg text-gray-500 font-semibold cursor-pointer"
                     >
-                        Format
-                    </button>
+                        <select
+                            id="case"
+                            class="appearance-none bg-transparent py-3 px-4 border-none text-gray-500"
+                        >
+                            <option value="snakeCase" selected>
+                                snake_case
+                            </option>
+                            <option value="kebabCase">kebab-case</option>
+                            <option value="camelCase">camelCase</option>
+                            <option value="PascalCase">PascalCase</option>
+                        </select>
+                        <div
+                            class="absolute inset-y-0 right-2 flex items-center px-2 pointer-events-none"
+                        >
+                            <svg
+                                class="w-4 h-4 fill-current text-gray-500"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    d="M10 12l-6-6-1 1 7 7 7-7-1-1-6 6z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <button
+                            class="focus:border-blue-500 border bg-blue-600 active:bg-blue-800 py-4 px-7 text-white font-semibold rounded-lg hover:bg-blue-900 cursor-pointer"
+                            id="searchButton"
+                            onclick="formatString()"
+                        >
+                            Format
+                        </button>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
-        <script
-            type="text/javascript"
-            src="http://www.cornify.com/js/cornify.js"
-        ></script>
-        <script type="text/javascript" src="./src/js/script.js"></script>
+        <script defer src="./src/js/script.js"></script>
     </body>
 </html>
