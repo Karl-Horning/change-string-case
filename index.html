@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Change String Case</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"
+        />
+        <link rel="stylesheet" href="./src/css/styles.css" />
+    </head>
+    <body>
+        <div class="ui container">
+            <form class="form" onsubmit="return false">
+                <div class="ui massive middle aligned fluid action input">
+                    <input
+                        id="string"
+                        type="text"
+                        placeholder="Enter a string..."
+                        autofocus
+                    />
+                    <button
+                        id="submit"
+                        type="submit"
+                        class="ui button"
+                        onclick="formatString()"
+                    >
+                        Format
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script
+            type="text/javascript"
+            src="http://www.cornify.com/js/cornify.js"
+        ></script>
+        <script type="text/javascript" src="./src/js/script.js"></script>
+    </body>
+</html>

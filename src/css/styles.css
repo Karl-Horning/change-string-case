@@ -1,0 +1,38 @@
+html, body {
+  background-color: #607D8B;
+  background-image: url(../img/Huge-Backgrounds-4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+}
+
+.container > .form {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.ui.fluid.input>input {
+  width: 760px!important;
+}
+
+.ui.massive.middle.aligned.fluid.action.input {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2.5px 3px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid #e0e1e2;
+  border-radius: 7px;
+}
+
+.ui.massive.middle.aligned.fluid.action.input:hover,
+.ui.massive.middle.aligned.fluid.action.input:focus {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 4.5px 5px 0 rgba(0, 0, 0, 0.19);
+}
