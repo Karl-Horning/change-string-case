@@ -3,6 +3,11 @@ const secretCode = "wooooooooooo";
 const searchButton = document.getElementById("searchButton");
 const stringToFormat = document.getElementById("stringToFormat");
 
+/**
+ * Handles key events for secret code checking.
+ *
+ * @param {KeyboardEvent} e - The key event.
+ */
 const handleSecretCodeCheck = (e) => {
     pressed.push(e.key);
     pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
@@ -12,7 +17,18 @@ const handleSecretCodeCheck = (e) => {
     }
 };
 
-// This is  a   _sample-string  with--special___characters! and hyphens_
+/**
+ * Converts a string to snake_case.
+ *
+ * @param {string} str - The input string.
+ * @returns {string} - The formatted string.
+ * Example of using toSnakeCase:
+ * @example
+ * const inputString = 'This is  a   _sample-string  with--special___characters! and hyphens_';
+ * const snakeCaseResult = toSnakeCase(inputString);
+ * console.log(snakeCaseResult);
+ * // Output: 'this_is_a_sample_string_with_special_characters_and_hyphens'
+ */
 const toSnakeCase = (str) => {
     return (
         str
@@ -40,6 +56,12 @@ const toSnakeCase = (str) => {
     );
 };
 
+/**
+ * Converts a string to kebab-case.
+ *
+ * @param {string} str - The input string.
+ * @returns {string} - The formatted string.
+ */
 const toKebabCase = (str) => {
     return (
         str
@@ -67,6 +89,12 @@ const toKebabCase = (str) => {
     );
 };
 
+/**
+ * Converts a string to PascalCase.
+ *
+ * @param {string} str - The input string.
+ * @returns {string} - The formatted string.
+ */
 const toPascalCase = (str) => {
     return (
         str
@@ -84,6 +112,12 @@ const toPascalCase = (str) => {
     );
 };
 
+/**
+ * Converts a string to camelCase.
+ *
+ * @param {string} str - The input string.
+ * @returns {string} - The formatted string.
+ */
 const toCamelCase = (str) => {
     // Use the toPascalCase function to format the string
     const pascalCase = toPascalCase(str);
@@ -91,6 +125,9 @@ const toCamelCase = (str) => {
     return pascalCase.charAt(0).toLowerCase() + pascalCase.slice(1);
 };
 
+/**
+ * Formats the input string based on the selected case and copies it to the clipboard.
+ */
 const formatString = () => {
     const stringToFormat = document.getElementById("stringToFormat");
     const caseSelector = document.getElementById("caseSelect");
@@ -126,7 +163,11 @@ const formatString = () => {
 
 searchButton.addEventListener("click", formatString);
 
-// Add keypress event listener for the Enter key
+/**
+ * Adds a keypress event listener for the Enter key on the string input element.
+ *
+ * @param {KeyboardEvent} e - The key event.
+ */
 stringToFormat.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
         formatString();
