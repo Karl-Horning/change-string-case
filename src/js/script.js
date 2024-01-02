@@ -1,5 +1,7 @@
 const pressed = [];
 const secretCode = "wooooooooooo";
+const searchButton = document.getElementById("searchButton");
+const stringToFormat = document.getElementById("stringToFormat");
 
 const handleSecretCodeCheck = (e) => {
     pressed.push(e.key);
@@ -74,7 +76,7 @@ const toPascalCase = (str) => {
             // Remove whitespace from beginning and end
             .trim()
             // Capitalise the first letter of each word
-            .replace(/(?:^|\W|_)\w/g, function (match) {
+            .replace(/(?:^|\W|_)\w/g, (match) => {
                 return match.toUpperCase();
             })
             // Replace whitespace characters
@@ -89,25 +91,26 @@ const toCamelCase = (str) => {
     return pascalCase.charAt(0).toLowerCase() + pascalCase.slice(1);
 };
 
-function formatString() {
+const formatString = () => {
     const stringToFormat = document.getElementById("stringToFormat");
-    const caseSelect = document.getElementById("caseSelect");
+    const caseSelector = document.getElementById("caseSelect");
     let formattedString = String(stringToFormat.value);
 
-    switch (true) {
-        case caseSelect.value === "snakeCase":
+    switch (caseSelector.value) {
+        case "snakeCase":
             formattedString = toSnakeCase(formattedString);
             break;
-        case caseSelect.value === "kebabCase":
+        case "kebabCase":
             formattedString = toKebabCase(formattedString);
             break;
-        case caseSelect.value === "camelCase":
+        case "camelCase":
             formattedString = toCamelCase(formattedString);
             break;
-        case caseSelect.value === "pascalCase":
+        case "pascalCase":
             formattedString = toPascalCase(formattedString);
             break;
         default:
+            console.error("Unexpected case value");
             break;
     }
 
@@ -119,17 +122,15 @@ function formatString() {
         .writeText(formattedString)
         .then(() => console.log("Text successfully copied to clipboard"))
         .catch((err) => console.error("Unable to copy text to clipboard", err));
-}
+};
 
-document.getElementById("searchButton").addEventListener("click", formatString);
+searchButton.addEventListener("click", formatString);
 
 // Add keypress event listener for the Enter key
-document
-    .getElementById("stringToFormat")
-    .addEventListener("keypress", function (e) {
-        if (e.key === "Enter") {
-            formatString();
-        }
-    });
+stringToFormat.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        formatString();
+    }
+});
 
 window.addEventListener("keyup", handleSecretCodeCheck);
