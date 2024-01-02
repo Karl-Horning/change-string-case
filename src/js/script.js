@@ -10,23 +10,13 @@ const handleSecretCodeCheck = (e) => {
     }
 };
 
-// outputs string by removing punctuation and replacing spaces with hyphens
-const formatStrUsingSnakeCase = (str) =>
-    str
-        .replace(/[^\w\s]/g, "")
-        .replace(/\s+/g, "-")
-        .toLowerCase();
-
-const formatStrUsingKebabCase = (str) =>
-    str
-        .replace(/[^\w\s]/g, "")
-        .replace(/\s+/g, "_")
-        .toLowerCase();
-
 // This is  a   _sample-string  with--special___characters! and hyphens_
 const toSnakeCase = (str) => {
     return (
         str
+            // Add spaces before capital letters
+            .replace(/([A-Z])/g, " $1")
+
             // Replace multiple hyphens with a single hyphen
             .replace(/-+/g, "-")
 
@@ -51,6 +41,9 @@ const toSnakeCase = (str) => {
 const toKebabCase = (str) => {
     return (
         str
+            // Add spaces before capital letters
+            .replace(/([A-Z])/g, " $1")
+
             // Replace multiple hyphens with a single hyphen
             .replace(/-+/g, "-")
 
@@ -90,7 +83,9 @@ const toPascalCase = (str) => {
 };
 
 const toCamelCase = (str) => {
+    // Use the toPascalCase function to format the string
     const pascalCase = toPascalCase(str);
+    // Make the first character in a string lower case
     return pascalCase.charAt(0).toLowerCase() + pascalCase.slice(1);
 };
 
