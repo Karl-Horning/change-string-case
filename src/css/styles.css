@@ -1,3 +1,4 @@
+/* General Styles */
 .min-h-screen {
     /* Create a scrolling background animation */
     animation: scrollBackground 10s ease-in-out infinite;
@@ -24,6 +25,7 @@
     }
 }
 
+/* Input Styles */
 #string-to-format,
 #case-select,
 #search-button {
@@ -45,10 +47,9 @@
     border-right: 5px solid #0d6efd;
 }
 
-
 /* Default styles for all screen sizes */
 
-/* Media query for screens with a maximum width of 767px (phones) */
+/* Media query for phones */
 @media only screen and (max-width: 767px) {
     #string-to-format,
     #case-select,
@@ -67,7 +68,7 @@
     }
 }
 
-/* Media query for screens with a minimum width of 768px and a maximum width of 991px (tablets) */
+/* Media query for tablets */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     #string-to-format {
         width: 55%;
@@ -82,7 +83,7 @@
     }
 }
 
-/* Media query for screens with a minimum width of 992px and a maximum width of 1199px (small desktops) */
+/* Media query for small desktops */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     #string-to-format {
         width: 65%;
@@ -97,7 +98,7 @@
     }
 }
 
-/* Media query for screens with a minimum width of 1200px (large desktops) */
+/* Media query for large desktops */
 @media only screen and (min-width: 1200px) {
     #string-to-format {
         width: 75%;
