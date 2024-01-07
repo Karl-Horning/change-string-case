@@ -1,29 +1,45 @@
 .min-h-screen {
-  /* Create a scrolling background animation */
-  animation: scrollBackground 10s ease-in-out infinite;
-  /* Set a linear gradient background */
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  /* Set text color to white, height to 100vh, and width to 100% */
-  color: #fff;
-  height: 100vh;
-  width: 100%;
+    /* Create a scrolling background animation */
+    animation: scrollBackground 10s ease-in-out infinite;
+    /* Set a linear gradient background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    /* Set text color to white, height to 100vh, and width to 100% */
+    color: #fff;
+    height: 100vh;
+    width: 100%;
 }
 
-.input-shadow {
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+.w-90 {
+    width: 90% !important;
+}
+
+.w-80 {
+    width: 80% !important;
+}
+
+.w-15 {
+    width: 15% !important;
+}
+
+.w-10 {
+    width: 10% !important;
+}
+
+.w-5 {
+    width: 5% !important;
 }
 
 @keyframes scrollBackground {
-  0% {
-      background-position: 0 50%;
-  }
+    0% {
+        background-position: 0 50%;
+    }
 
-  50% {
-      background-position: 100% 50%;
-  }
+    50% {
+        background-position: 100% 50%;
+    }
 
-  100% {
-      background-position: 0 50%;
-  }
+    100% {
+        background-position: 0 50%;
+    }
 }
