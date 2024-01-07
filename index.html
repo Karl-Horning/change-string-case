@@ -4,31 +4,34 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
         />
         <link rel="stylesheet" href="./src/css/styles.css" />
-        <title>Your Page Title</title>
+        <title>Change String Case</title>
     </head>
 
     <body>
-        <div class="min-h-screen flex justify-center items-center px-20">
-            <div class="space-y-10">
-                <div
-                    class="flex items-center px-2 py-0 space-x-6 bg-gray-300 rounded-xl shadow-lg"
-                >
-                    <input
-                        class="bg-gray-100 p-4 space-x-4 rounded-lg input-shadow text-black w-72 outline-none focus:border-blue-500 border"
-                        type="text"
-                        placeholder="Enter a string..."
-                        id="stringToFormat"
-                    />
-                    <div
-                        class="relative flex py-3 px-4 rounded-lg text-gray-500 font-semibold cursor-pointer"
-                    >
+        <main
+            class="d-flex align-items-center justify-content-center min-h-screen"
+        >
+            <section class="container">
+                <div class="row">
+                    <div class="input-group input-group-lg">
+                        <input
+                            id="stringToFormat"
+                            class="form-control w-75"
+                            aria-label="First name"
+                            placeholder="Enter a string..."
+                            type="text"
+                        />
+
                         <select
                             id="caseSelect"
-                            class="appearance-none bg-transparent py-3 px-4 border-none text-gray-500"
+                            class="form-select w-15"
+                            aria-label="Select the case to format the string"
                         >
                             <option value="snakeCase" selected>
                                 snake_case
@@ -37,30 +40,23 @@
                             <option value="camelCase">camelCase</option>
                             <option value="pascalCase">PascalCase</option>
                         </select>
-                        <div
-                            class="absolute inset-y-0 right-2 flex items-center px-2 pointer-events-none"
-                        >
-                            <svg
-                                class="w-4 h-4 fill-current text-gray-500"
-                                viewBox="0 0 20 20"
-                            >
-                                <path
-                                    d="M10 12l-6-6-1 1 7 7 7-7-1-1-6 6z"
-                                ></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
+
                         <button
-                            class="focus:border-blue-500 border bg-blue-600 active:bg-blue-800 py-4 px-7 text-white font-semibold rounded-lg hover:bg-blue-900 cursor-pointer"
                             id="searchButton"
+                            class="btn btn-primary w-10"
+                            type="button"
                         >
                             Format
                         </button>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
         <script defer src="./src/js/script.js"></script>
     </body>
 </html>
