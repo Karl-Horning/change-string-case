@@ -51,6 +51,7 @@
 
 /* Media query for phones */
 @media only screen and (max-width: 767px) {
+    /* Phones: 0px - 767px */
     #string-to-format,
     #case-select,
     #search-button {
@@ -70,6 +71,7 @@
 
 /* Media query for tablets */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Tablets: 768px - 991px */
     #string-to-format {
         width: 55%;
     }
@@ -85,6 +87,7 @@
 
 /* Media query for small desktops */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Small Desktops: 992px - 1199px */
     #string-to-format {
         width: 65%;
     }
@@ -100,6 +103,7 @@
 
 /* Media query for large desktops */
 @media only screen and (min-width: 1200px) {
+    /* Large Desktops: 1200px and above */
     #string-to-format {
         width: 75%;
     }
