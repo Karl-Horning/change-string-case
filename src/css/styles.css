@@ -10,26 +10,6 @@
     width: 100%;
 }
 
-.w-90 {
-    width: 90% !important;
-}
-
-.w-80 {
-    width: 80% !important;
-}
-
-.w-15 {
-    width: 15% !important;
-}
-
-.w-10 {
-    width: 10% !important;
-}
-
-.w-5 {
-    width: 5% !important;
-}
-
 @keyframes scrollBackground {
     0% {
         background-position: 0 50%;
@@ -41,5 +21,71 @@
 
     100% {
         background-position: 0 50%;
+    }
+}
+
+/* Default styles for all screen sizes */
+
+/* Media query for screens with a maximum width of 767px (phones) */
+@media only screen and (max-width: 767px) {
+    #string-to-format,
+    #case-select,
+    #search-button {
+        border-radius: 0;
+        border-radius: 0.25rem;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .input-group
+        > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+            .valid-feedback
+        ):not(.invalid-tooltip):not(.invalid-feedback) {
+        margin-left: 0;
+    }
+}
+
+/* Media query for screens with a minimum width of 768px and a maximum width of 991px (tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #string-to-format {
+        width: 55%;
+    }
+
+    #case-select {
+        width: 25%;
+    }
+
+    #search-button {
+        width: 20%;
+    }
+}
+
+/* Media query for screens with a minimum width of 992px and a maximum width of 1199px (small desktops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #string-to-format {
+        width: 65%;
+    }
+
+    #case-select {
+        width: 25%;
+    }
+
+    #search-button {
+        width: 10%;
+    }
+}
+
+/* Media query for screens with a minimum width of 1200px (large desktops) */
+@media only screen and (min-width: 1200px) {
+    #string-to-format {
+        width: 75%;
+    }
+
+    #case-select {
+        width: 15%;
+    }
+
+    #search-button {
+        width: 10%;
     }
 }

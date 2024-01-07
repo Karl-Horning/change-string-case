@@ -1,7 +1,7 @@
 const pressed = [];
 const secretCode = "wooooooooooo";
-const searchButton = document.getElementById("searchButton");
-const stringToFormat = document.getElementById("stringToFormat");
+const searchButton = document.getElementById("search-button");
+const stringToFormat = document.getElementById("string-to-format");
 
 /**
  * Handles key events for secret code checking.
@@ -129,8 +129,8 @@ const toCamelCase = (str) => {
  * Formats the input string based on the selected case and copies it to the clipboard.
  */
 const formatString = () => {
-    const stringToFormat = document.getElementById("stringToFormat");
-    const caseSelector = document.getElementById("caseSelect");
+    const stringToFormat = document.getElementById("string-to-format");
+    const caseSelector = document.getElementById("case-select");
     let formattedString = String(stringToFormat.value);
 
     switch (caseSelector.value) {
