@@ -4,19 +4,21 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Demo](#demo)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Acknowledgments](#acknowledgments)
-- [License](#license)
-- [Author](#author)
+- [Change String Case](#change-string-case)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Demo](#demo)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Acknowledgments](#acknowledgments)
+  - [License](#license)
+  - [Author](#author)
 
 ## Overview
 
-"Change String Case" is a JavaScript utility that facilitates versatile string case conversions. Transform your text into snake_case, kebab-case, camelCase, or PascalCase with ease. Copy formatted strings to the clipboard effortlessly, enhancing your coding workflow.
+A string formatting tool with multiple options. Users can input and convert a string into various formats, such as snake_case, kebab-case, camelCase, or PascalCase. The selected format is applied, and the formatted string is automatically copied to the clipboard.
 
 ## Demo
 
